@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - TechQuestExplorers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* CSS styles specific to this page */
+    /* Replace background-color and other styles with your desired design */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom, #0123ffe4, #00000074); /* Gradient background */
+      color: #a31111; /* Text color */
+      transition: all 0.3s ease;
+      line-height: 2.1; /* Adjust line spacing */
+    }
+
+    /* Header styles */
+    header {
+      background-image: url('/asset/TechQuestExplorers.jpg'); /* Background image */
+      background-size: cover; /* Cover the whole header */
+      background-position: center; /* Center the background image */
+      color: #ffffff;
+      text-align: center;
+      padding: 50px 0; /* Adjust padding */
+      transition: all 0.3s ease;
+    }
+
+    header h1 {
+      font-size: 6.3rem; /* Adjust font size */
+      margin-bottom: 10px; /* Adjust margin */
+      height: 12;
+      block-size: auto;
+      background: linear-gradient(to bottom, #1a02f1, white); /* Vertical gradient from #1a02f1 to white */
+      -webkit-background-clip: text; /* Clip the text to the background */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+      animation: floatAnimation 3s ease-in-out infinite alternate; /* Apply floating animation */
+    }
+
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(50px); /* Adjust floating distance */
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Modernized navigation links */
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0 20px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #FFC300;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    nav a:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+
+    /* Hero section styles */
+    .hero {
+      text-align: center;
+      padding: 100px 0; /* Adjust padding */
+      color: #FFF;
+      transition: all 0.3s ease;
+      height: 25vh; /* Adjust height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero p {
+      font-size: 2.0rem; /* Adjust font size */
+      margin-bottom: 20px;
+      background: linear-gradient(to bottom, #efeeff, #FFF); /* Vertical gradient from #1a02f1 to #FFF */
+      -webkit-background-clip: text; /* Clip the text to the gradient */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+      background-size: 100% 200%; /* Double the background size to cover the text */
+      animation: animateGradient 5s infinite alternate; /* Animation with alternate direction */
+    }
+
+  
+    .hero h2 {
+      font-size: 4.2rem; /* Adjust font size */
+      margin-bottom: 20px;
+      background: linear-gradient(to bottom, #f11e02, #FFF); /* Vertical gradient from #1a02f1 to #FFF */
+      -webkit-background-clip: text; /* Clip the text to the gradient */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+      background-size: 100% 200%; /* Double the background size to cover the text */
+      animation: animateGradient 5s infinite alternate; /* Animation with alternate direction */
+    }
+
+    @keyframes animateGradient {
+      0% {
+        background-position: 0 0; /* Start position */
+      }
+      100% {
+        background-position: 0 -100%; /* End position (moves the gradient up) */
+      }
+    }
+
+    /* Main content styles */
+    .main-content {
+      padding: 30px 20px; /* Increase padding */
+      font-size: 1.4rem; /* Adjust font size */
+      line-height: 2.1; /* Adjust line spacing */
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    /* Call-to-action button styles */
+    .cta-button {
+      background-color: #FFC300;
+      color: #FFF;
+      padding: 12px 24px; /* Adjust padding */
+      font-size: 1.2rem; /* Adjust font size */
+      text-decoration: none;
+      border-radius: 15px; /* Increased border-radius for a rounder look */
+      transition: all 0.3s ease;
+      width: fit-content; /* Adjust button width */
+      text-align: center; /* Center text */
+      margin: 20px auto; /* Center horizontally with some margin */
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background-color: #FFD700; /* Darker shade on hover */
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #0031f3;
+      color: #FFF;
+      padding: 30px 0;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    footer p {
+      margin: 10px 0; /* Adjust margin */
+    }
+
+    footer a {
+      color: #d3d9fa;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Social media icons */
+    .social-media a {
+      color: #FFF;
+      font-size: 1.8rem;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-media a:hover {
+      color: #FFC300;
+    }
+
+    /* Smooth zoom-in/out effects */
+    * {
+      transition: all 0.3 ease;
+    }
+
+    /* Additional CSS styles from the second HTML snippet */
+    /* Apply fadeInUp animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-up {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    /* Center align buttons */
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* New gallery section styles */
+    .gallery {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      color: #e9e8f1;
+    }
+
+    .gallery-subsection {
+      margin-bottom: 70px;
+    }
+
+    .gallery-subsection h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #f0f0f0;
+    }
+
+    .gallery-images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .gallery-images img {
+      width: 500px;
+      height: 250px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-images img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Media queries for responsiveness */
+    @media only screen and (max-width: 2560px) {
+      /* Styles for large desktop monitors */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 1920px) {
+      /* Styles for standard desktop monitors */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 1366px) {
+      /* Styles for small desktop monitors */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 1200px) {
+      /* Styles for laptops and smaller desktop monitors */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 1024px) {
+      /* Styles for tablets */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Styles for medium-size tablets */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 480px) {
+      /* Styles for small-size tablets and large-screen smartphones */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 414px) {
+      /* Styles for standard smartphones */
+      /* Add your styles here */
+    }
+
+    @media only screen and (max-width: 320px) {
+      /* Styles for small-screen smartphones */
+      /* Add your styles here */
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="width: 40px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 60px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 80px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 100px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 120px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="width: 120px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 100px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 80px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 60px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 40px; height: 1;">
+
+    <h1>TechQuestExplorers</h1>
+    <h2>Mastering Code : Shaping Tomorrow  </h2>
+
+    <nav>
+      <a href="./1aHomePage.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./2AboutUsPage.html"><i class="fas fa-info-circle"></i> About</a>
+      <a href="./3AOurService.html"><i class="fas fa-cogs"></i> Services</a>
+      <a href="./7ACurriculum.html"><i class="fas fa-book-open"></i> Curriculum</a>
+      <a href="./5ATestimonials.html"><i class="fas fa-star"></i> Testimonials</a>
+      <a href="./6AFAQ.html"><i class="fas fa-question-circle"></i> FAQ</a>
+      <a href="./4AContactUs.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <h2>Welcome to TechQuestExplorers</h2>
+    <p><strong>Your Future-Ready Partner in Education and Technology Solutions</strong></p>
+  </section>
+
+  <!-- Main content -->
+  <div class="main-content button-container">
+    <a href="./3AOurService.html" class="cta-button">Explore Services</a>
+    <a href="./4AContactUs.html" class="cta-button">Contact Us</a>
+  </div>
+
+  <!-- Gallery section -->
+  <section class="gallery">
+    <h2>Our Collaborators</h2>
+
+    <!-- Individuals -->
+    <div class="gallery-subsection">
+      <h3>Individuals</h3>
+      <div class="gallery-images">
+        <!-- Individual images -->
+        <img src="/asset/individual1.jpg" alt="Individual 1">
+        <img src="/asset/individual3.jpg" alt="Individual 2">
+        <!-- Add more individual images as needed -->
+      </div>
+    </div>
+
+    <!-- Organizations -->
+    <div class="gallery-subsection">
+      <h3>Organizations</h3>
+      <div class="gallery-images">
+        <!-- Organization images -->
+        <img src="/asset/org1.jpg" alt="Organization 1">
+        <img src="/asset/org2.jpg" alt="Organization 2">
+        <!-- Add more organization images as needed -->
+      </div>
+    </div>
+
+    <!-- Schools and Learning Centers -->
+    <div class="gallery-subsection">
+      <h3>Schools and Learning Centers</h3>
+      <div class="gallery-images">
+        <!-- School and Learning Center images -->
+        <img src="/asset/Schools1.jpeg" alt="School 1">
+        <img src="/asset/School2.jpeg" alt="School 2">
+        <!-- Add more school images as needed -->
+      </div>
+    </div>
+
+    <!-- Entities -->
+    <div class="gallery-subsection">
+      <h3>Entities</h3>
+      <div class="gallery-images">
+        <!-- Entity images -->
+        <img src="/asset/study.jpg" alt="Entity 1">
+        <img src="/asset/teach.jpg" alt="Entity 2">
+        <!-- Add more entity images as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> TechQuestExplorers Educational Services, Tabora Junction, Greater Accra, Ghana</p>
+      <p><i class="fas fa-phone"></i> 0544118351 or 0554026405</p>
+      <p><i class="fas fa-envelope"></i> techquestexplorers0@gmail.com</p>
+    </div>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook-f" style="color: #3b5998;"></i></a>
+      <a href="#"><i class="fab fa-twitter" style="color: #00acee;"></i></a>
+      <a href="#"><i class="fab fa-instagram" style="color: #c13584;"></i></a>
+      <a href="#"><i class="fab fa-tiktok" style="color: #000;"></i></a> <!-- Added TikTok icon -->
+    </div>
+    <p>&copy; 2024 TechQuestExplorers. All rights reserved.</p>
+  </footer>
+</body>
+</html>

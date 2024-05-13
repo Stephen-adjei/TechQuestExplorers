@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - TechQuestExplorers</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* CSS styles specific to this page */
+    /* Replace background-color and other styles with your desired design */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #1c83f0, #FFFFFF); /* Gradient background */
+      color: #333; /* Text color */
+      transition: all 0.3s ease;
+      line-height: 2.1; /* Adjust line spacing */
+    }
+
+    /* Header styles */
+    header {
+      background-color: #1a02f1;
+      color: #FFF;
+      text-align: center;
+      padding: 5vw 0; /* Adjust padding */
+      transition: all 0.3s ease;
+    }
+
+    header h1 {
+      font-size: 6.3vw; /* Adjust font size */
+      margin-bottom: 1vw; /* Adjust margin */
+      background: linear-gradient(to bottom, #1a02f1, #ffffff); /* Vertical gradient from #1a02f1 to white */
+      -webkit-background-clip: text; /* Clip the text to the background */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+      animation: floatAnimation 3s ease-in-out infinite alternate; /* Apply floating animation */
+    }
+
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5vw); /* Adjust floating distance */
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Navigation styles */
+    nav {
+      margin-top: 1.5vw;
+    }
+
+    nav a {
+      color: #FFF;
+      text-decoration: none;
+      margin: 0 1.5vw;
+      font-size: 1.2vw;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FFC300;
+    }
+
+    /* Hero section styles */
+    .hero {
+      text-align: center;
+      padding: 10vw 0; /* Adjust padding */
+      background-image: url('hero-background.jpg'); /* Add your hero image */
+      background-size: cover;
+      background-position: center;
+      color: #FFF;
+      transition: all 0.3s ease;
+      height: 0vh; /* Adjust height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h2 {
+      font-size: 2.2vw; /* Adjust font size */
+      margin-bottom: 2vw;
+    }
+
+    /* Body section styles */
+    .body-content {
+      padding: 4vw 2vw; /* Increase padding */
+      font-size: 1.4vw; /* Adjust font size */
+      line-height: 2.1; /* Adjust line spacing */
+      transition: all 0.3s ease;
+      margin-bottom: 5vw; /* Adjust margin bottom */
+    }
+
+    /* FAQ styles */
+    .faq {
+      max-width: 60vw;
+      margin: 0 auto;
+    }
+
+    .question {
+      background-color: #fff;
+      padding: 2vw;
+      border-radius: 1vw;
+      box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+      margin-bottom: 2vw;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 1vw;
+    }
+
+    .answer {
+      margin-left: 3vw;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #2980B9;
+      color: #FFF;
+      padding: 3vw 0;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    footer p {
+      margin: 1vw 0; /* Adjust margin */
+    }
+
+    footer a {
+      color: #d3f5fa;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Social media icons */
+    .social-media a {
+      color: #FFF;
+      font-size: 1.8vw;
+      margin: 0 1vw;
+      transition: all 0.3s ease;
+    }
+
+    .social-media a:hover {
+      color: #FFC300;
+    }
+
+    /* Media Queries for responsiveness */
+    @media only screen and (min-width: 1200px) {
+      /* Large desktop monitors */
+
+          /* Media Queries */
+    @media screen and (max-width: 2560px) {
+      /* Styles for large desktop monitors */
+    }
+
+    @media screen and (max-width: 1920px) {
+      /* Styles for standard desktop monitors */
+    }
+
+    @media screen and (max-width: 1366px) {
+      /* Styles for small desktop monitors and laptops */
+    }
+
+    @media screen and (max-width: 1024px) {
+      /* Styles for tablets */
+    }
+
+    @media screen and (max-width: 768px) {
+      /* Styles for smartphones */
+    }
+
+    @media screen and (max-width: 414px) {
+      /* Styles for small-screen smartphones */
+    }
+
+      header {
+        padding: 30px 0;
+      }
+      header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+      }
+      nav a {
+        font-size: 1.2rem;
+      }
+      .hero {
+        padding: 100px 0;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+      .body-content {
+        padding: 40px 20px;
+        font-size: 1.4rem;
+      }
+      .faq {
+        max-width: 800px;
+      }
+      .question {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .question p {
+        margin-bottom: 10px;
+      }
+      .answer {
+        margin-left: 30px;
+      }
+      footer {
+        padding: 30px 0;
+      }
+      footer p {
+        margin: 10px 0;
+      }
+      .social-media a {
+        font-size: 1.8rem;
+        margin: 0 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header style="background-image: url('/asset/TechQuestExplorers2.jpg');">
+
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="width: 40px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 60px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 80px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 100px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 120px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="width: 120px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 100px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 80px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 60px; height: 1;">
+    <img src="/asset/Logo.png" alt="TechQuestExplorers Logo" style="max-width: 40px; height: 1;">
+
+    <h1>TechQuestExplorers</h1>
+    <h2>Mastering Code : Shaping Tomorrow</h2>
+    <nav>
+      <a href="./1aHomePage.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./2AboutUsPage.html"><i class="fas fa-info-circle"></i> About</a>
+      <a href="./3AOurService.html"><i class="fas fa-cogs"></i> Services</a>
+      <a href="./7ACurriculum.html"><i class="fas fa-book-open"></i> Curriculum</a>
+      <a href="./5ATestimonials.html"><i class="fas fa-star"></i> Testimonials</a>
+      <a href="./6AFAQ.html"><i class="fas fa-question-circle"></i> FAQ</a>
+      <a href="./4AContactUs.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+ 
+  <!-- Hero section -->
+  <section class="hero">
+    <h2>Frequently Asked Questions</h2>
+  </section>
+
+  <!-- Main content -->
+  <div class="body-content animate-up">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>What coding programs do you offer?</p>
+        <div class="answer">
+          <p>We offer coding programs for various age groups and skill levels, including introductory courses for beginners and advanced courses for experienced coders. Our programs cover languages such as Python, JavaScript, and more.</p>
+        </div>
+      </div>
+      
+      <!-- Question 2 -->
+      <div class="question">
+        <p>How can I enroll in your coding programs?</p>
+        <div class="answer">
+          <p>Enrollment in our coding programs is easy! Simply visit our website and navigate to the enrollment section. You can choose your desired program, fill out the enrollment form, and make the necessary payments online.</p>
+        </div>
+      </div>
+      
+      <!-- Question 3 -->
+      <div class="question">
+        <p>What are the schedules for your coding classes?</p>
+        <div class="answer">
+          <p>We offer flexible scheduling options for our coding classes to accommodate different time zones and student preferences. You can choose from weekday or weekend classes, as well as morning or evening sessions, based on your availability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> TechQuestExplorers Educational Services, Tabora Junction, Greater Accra, Ghana</p>
+      <p><i class="fas fa-phone"></i> 0544118351 or 0554026405</p>
+      <p><i class="fas fa-envelope"></i> techquestexplorers0@gmail.com</p>
+    </div>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook-f" style="color: #3b5998;"></i></a>
+      <a href="#"><i class="fab fa-twitter" style="color: #00acee;"></i></a>
+      <a href="#"><i class="fab fa-instagram" style="color: #c13584;"></i></a>
+      <a href="#"><i class="fab fa-tiktok" style="color: #000;"></i></a> <!-- Added TikTok icon -->
+    </div>
+    <p>&copy; 2024 TechQuestExplorers. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
